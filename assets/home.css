@@ -253,7 +253,7 @@ header .menu-btn{background:#1F4466!important}
 .map-key{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--muted)}
 .map-key span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:-1px;box-sizing:border-box}
 .k-base::before{background:var(--mark)}.k-week::before{background:var(--navy)}.k-far::before{border:2px solid var(--navy);background:#FFFFFF}
-@media (max-width:960px){.map-wrap{order:-1}}
+
 
 /* Work photo viewer */
 .zoom{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
@@ -282,3 +282,34 @@ header .menu-btn{background:#1F4466!important}
 }
 .map-credit{flex-basis:100%;font-size:12px;color:var(--muted)}
 .map-credit a{color:inherit}
+
+/* Mobile header: keep call and menu buttons on the right edge */
+@media (max-width:960px){.header-actions{margin-left:auto!important;gap:8px!important}}
+@media (max-width:360px){.brand-img{height:34px!important}header .wrap{gap:12px!important}}
+
+/* Mobile pass */
+#site-nav a[href^="tel"]{color:var(--navy)!important;border-color:var(--navy)!important}
+#site-nav a[href^="tel"]:hover{color:#FFFFFF!important}
+@media (max-width:600px){
+/* services: icon beside the title, tighter cards */
+.svc{display:grid;grid-template-columns:40px minmax(0,1fr);column-gap:14px;row-gap:8px;padding:18px 16px 0}
+.svc > svg{grid-row:1;align-self:center}
+.svc > h3{grid-row:1;font-size:24px!important}
+.svc > p,.svc > .svc-spec{grid-column:1 / -1}
+/* work: lead photo full width, the other two side by side */
+.work-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px!important}
+.work-grid > .big{grid-column:1 / -1!important}
+.work-grid figcaption{font-size:14px!important}
+/* map: full bleed and readable labels */
+.map-wrap{margin:8px -20px 0}
+.map{border-left:0;border-right:0}
+.map-key{padding:0 20px}
+.map-town text{font-size:18px}
+.map-base text{font-size:20px}
+.map-county{font-size:16px}
+.map-km{font-size:15px}
+.map-shield{display:none}
+/* footer: link groups in two columns */
+.foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:28px 20px!important}
+.foot-grid > div:first-child{grid-column:1 / -1}
+}
