@@ -1,0 +1,35 @@
+# Netlify serves every site over HTTPS. These rules redirect any http:// or bare-domain request
+# to https://www. and add security headers. The quote form uses Netlify Forms, so no API keys are needed.
+[[redirects]]
+  from = "http://ronanotooleconcretecutting.ie/*"
+  to = "https://www.ronanotooleconcretecutting.ie/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "http://www.ronanotooleconcretecutting.ie/*"
+  to = "https://www.ronanotooleconcretecutting.ie/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://ronanotooleconcretecutting.ie/*"
+  to = "https://www.ronanotooleconcretecutting.ie/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; frame-ancestors 'none'; form-action 'self'; base-uri 'self'"
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
