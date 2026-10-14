@@ -342,3 +342,20 @@ html.menu-open{overflow:hidden}
 .quote-grid aside span{color:var(--soft)!important}
 .quote-grid aside > div{border-color:rgba(255,255,255,.18)!important}
 .tone2 .map{border-color:var(--concrete-line)}
+
+/* Hero, desktop: photo fills the right half, its edge cut on a diagonal with a sprayed saw line */
+@media (min-width:961px){
+#top{position:relative;overflow:hidden}
+#top .hero-pad{padding-top:72px;padding-bottom:80px;min-height:560px}
+.hero-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}
+.hero-copy{padding-right:24px}
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:50vw;display:block!important}
+.hero-img{height:100%;aspect-ratio:auto!important;clip-path:polygon(17% 0,100% 0,100% 100%,3% 100%)}
+.hero-photo::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(180deg,var(--mark) 0 16px,transparent 16px 26px);clip-path:polygon(calc(17% - 14px) 0,calc(17% - 10px) 0,calc(3% - 10px) 100%,calc(3% - 14px) 100%);-webkit-mask:linear-gradient(#000 0 0) top / 100% 100% no-repeat;mask:linear-gradient(#000 0 0) top / 100% 100% no-repeat;animation:saw-line 1s var(--ease) .2s both}
+.dim{position:absolute;right:28px;bottom:28px;z-index:3}
+.dim::before,.dim::after,.dim-line{display:none}
+.dim-text{position:static;transform:none;writing-mode:horizontal-tb;background:var(--navy);padding:12px 16px;font-size:18px;display:block}
+.dim-text b{margin:0 8px 0 0}
+}
+@keyframes saw-line{from{-webkit-mask-size:100% 0;mask-size:100% 0}to{-webkit-mask-size:100% 100%;mask-size:100% 100%}}
+@media (prefers-reduced-motion:reduce){.hero-photo::before{animation:none}}
