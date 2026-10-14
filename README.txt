@@ -9,9 +9,8 @@ BEFORE GOING LIVE, REPLACE THESE PLACEHOLDERS
 - Phone number 087 123 4567 / +353871234567 (index.html, main.js, privacy.html, thank-you.html)
 - Email info@ronanotooleconcretecutting.ie
 - Domain www.ronanotooleconcretecutting.ie (index.html, privacy.html, terms.html, sitemap.xml, robots.txt, netlify.toml, .htaccess)
-- Opening hours
 - FAQ answers (index.html #faq): confirm they match how Ronan works
-- About section and credentials (insurance, Safe Pass, etc.): confirm they are accurate
+- About section: confirm it is accurate
 - Capability figures (cut depths, core sizes): confirm they match Ronan's equipment
 - Images in /img are free stock photos from Unsplash (Unsplash License, free for
   commercial use, no attribution required). Credits: Alex Gallegos (roadsaw),

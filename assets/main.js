@@ -222,7 +222,7 @@
         await db.collection("quotes").add({
           name: data.get("name"), phone: data.get("phone"), email: data.get("email"),
           location: data.get("location"), service: data.get("service"), size: data.get("size") || "",
-          property: data.get("property"), timing: data.get("timing"), details: data.get("details"),
+          timing: data.get("timing"), details: data.get("details"),
           photoNames: Array.prototype.map.call(files, function (f) { return f.name; }),
           submittedAt: new Date().toISOString()
         });

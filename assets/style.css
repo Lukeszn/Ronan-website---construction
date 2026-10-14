@@ -278,15 +278,6 @@ fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
 .site-footer .legal { margin-top: 44px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.14); display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; font-size: .88rem; }
 .site-footer button.linklike { background: none; border: 0; padding: 0; color: var(--on-navy-muted); font: inherit; cursor: pointer; text-decoration: underline; }
 
-/* Mobile action bar */
-.mobile-bar { display: none; }
-@media (max-width: 720px) {
-  .mobile-bar { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding-bottom: env(safe-area-inset-bottom, 0px); background: var(--navy); }
-  .mobile-bar a { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 56px; font: 700 1.15rem/1 var(--display); text-decoration: none; color: #fff; }
-  .mobile-bar a.q { background: var(--orange); }
-  .mobile-bar svg { width: 18px; height: 18px; }
-  body { padding-bottom: 56px; }
-}
 
 /* Cookie banner */
 .cookie { position: fixed; z-index: 70; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); max-width: 540px; background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-top: 5px solid var(--navy); padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.22); display: grid; gap: 14px; }

@@ -99,20 +99,13 @@ html{scroll-behavior:smooth;scroll-padding-top:96px}
 .form-status[data-state="err"]{color:#B3261E}
 .success-panel{border-left:6px solid #E35F1E;background:#F1F2F0;padding:32px;display:grid;gap:10px}
 .success-panel h3{font:700 30px/1.05 "Barlow Condensed",sans-serif;color:#15314B;margin:0}
-.mobile-bar{display:none}
-@media (max-width:720px){
-.mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:30;padding-bottom:env(safe-area-inset-bottom,0px);background:#15314B}
-.mobile-bar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:58px;color:#fff;text-decoration:none;font:700 19px/1 "Barlow Condensed",sans-serif}
-.mobile-bar a.q{background:#C9480C}
-body{padding-bottom:58px}
-}
 .cookie{position:fixed;z-index:40;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));max-width:520px;background:#fff;border:1px solid #DADDD9;border-top:5px solid #15314B;padding:20px;box-shadow:0 12px 32px rgba(14,35,55,.22);display:grid;gap:12px}
 .cookie[hidden]{display:none}
 .cookie h2{font:700 22px/1.1 "Barlow Condensed",sans-serif;color:#15314B;margin:0}
 .cookie p{margin:0;font-size:15px;color:#55606A}
 .cookie .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .cookie .btn{min-height:44px;font-size:17px;padding:0 12px}
-@media (max-width:720px){.cookie{left:10px;right:10px;bottom:calc(70px + env(safe-area-inset-bottom,0px));padding:14px}.cookie p{font-size:14px}}
+@media (max-width:720px){.cookie{left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:14px}.cookie p{font-size:14px}}
 .linklike{background:none;border:0;padding:0;font:inherit;cursor:pointer}
 input[type="file"]{width:100%;max-width:100%;min-width:0}
 
@@ -134,7 +127,6 @@ header{background:var(--navy-deep)!important;border-bottom:4px solid var(--mark)
 header .nav-link,header .nav-link:hover{color:#FFFFFF}
 header a[href^="tel"]{color:#FFFFFF!important;border-color:rgba(255,255,255,.28)!important}
 header .menu-btn{background:#1F4466!important}
-.mobile-bar a:not(.q){background:var(--navy-deep)}
 
 /* Cut mark above section headings: a dashed line, as sprayed on a slab before cutting */
 .eyebrow-rule{width:54px;background:repeating-linear-gradient(90deg,var(--mark) 0 14px,transparent 14px 20px)}
@@ -313,3 +305,4 @@ header .menu-btn{background:#1F4466!important}
 .foot-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:28px 20px!important}
 .foot-grid > div:first-child{grid-column:1 / -1}
 }
+.field{align-content:start}
