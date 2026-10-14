@@ -306,3 +306,39 @@ header .menu-btn{background:#1F4466!important}
 .foot-grid > div:first-child{grid-column:1 / -1}
 }
 .field{align-content:start}
+
+/* Cleaner buttons: body face, medium weight, soft corners */
+.btn{font:600 17px/1 var(--body);letter-spacing:0;min-height:50px;padding:0 24px;border-radius:4px;border-width:1.5px;gap:10px}
+.btn svg{flex:none}
+.btn-primary{box-shadow:0 1px 0 rgba(0,0,0,.12)}
+.btn-primary:active,.btn-line:active{transform:translateY(1px)}
+header .top-cta{font-size:16px!important;min-height:44px!important;padding:0 18px!important}
+header a[href^="tel"]{font:600 16px/1 var(--body)!important;border-radius:4px;min-height:44px!important}
+.menu-btn{border-radius:4px!important}
+.checker .chip span,.chip span{border-radius:4px}
+
+/* How a job runs on navy */
+#process .steps-grid li{border-top-color:var(--mark)!important}
+#process .steps-grid li > span{color:var(--soft)!important}
+#process .steps-grid h3{color:#FFFFFF}
+#process .steps-grid p{color:var(--soft)!important}
+
+/* Phone menu fills the screen */
+@media (max-width:960px){
+#site-nav{top:calc(100% + 4px)!important;height:calc(100dvh - 84px);overflow-y:auto;background:var(--navy-deep)!important;border:0!important;box-shadow:none!important;padding:12px 20px 32px!important;display:flex!important;flex-direction:column}
+#site-nav[data-open="false"]{display:none!important}
+#site-nav nav a{color:#FFFFFF!important;border-color:rgba(255,255,255,.14)!important;font-size:30px!important;padding:20px 0!important}
+#site-nav nav a:hover{color:#FFFFFF!important;box-shadow:inset 4px 0 0 var(--mark);padding-left:14px!important}
+#site-nav > div{margin-top:auto;padding-top:28px!important}
+#site-nav a[href^="tel"]{color:#FFFFFF!important;border-color:rgba(255,255,255,.8)!important}
+#site-nav a[href^="tel"]:hover{background:#FFFFFF;color:var(--navy)!important}
+html.menu-open{overflow:hidden}
+}
+
+/* Quote: light concrete, white form, navy contact panel */
+#quote .form-card{border-color:var(--concrete-line)!important;border-top-color:var(--navy)!important}
+.quote-grid aside{background:var(--navy)!important;border-top-color:var(--mark)!important;color:#FFFFFF}
+.quote-grid aside h3,.quote-grid aside a,.quote-grid aside b{color:#FFFFFF!important}
+.quote-grid aside span{color:var(--soft)!important}
+.quote-grid aside > div{border-color:rgba(255,255,255,.18)!important}
+.tone2 .map{border-color:var(--concrete-line)}

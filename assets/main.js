@@ -25,12 +25,13 @@
       var open = nav.getAttribute("data-open") === "true";
       nav.setAttribute("data-open", String(!open));
       toggle.setAttribute("aria-expanded", String(!open));
+      document.documentElement.classList.toggle("menu-open", !open);
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && nav.getAttribute("data-open") === "true") { nav.setAttribute("data-open", "false"); toggle.setAttribute("aria-expanded", "false"); toggle.focus(); }
+      if (e.key === "Escape" && nav.getAttribute("data-open") === "true") { nav.setAttribute("data-open", "false"); toggle.setAttribute("aria-expanded", "false"); document.documentElement.classList.remove("menu-open"); toggle.focus(); }
     });
     $$("a", nav).forEach(function (a) {
-      a.addEventListener("click", function () { nav.setAttribute("data-open", "false"); toggle.setAttribute("aria-expanded", "false"); });
+      a.addEventListener("click", function () { nav.setAttribute("data-open", "false"); toggle.setAttribute("aria-expanded", "false"); document.documentElement.classList.remove("menu-open"); });
     });
   }
 
