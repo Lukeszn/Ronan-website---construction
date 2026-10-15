@@ -9,9 +9,10 @@ BEFORE GOING LIVE, REPLACE THESE PLACEHOLDERS
 - FAQ answers (index.html #faq): confirm they match how Ronan works
 - About section: confirm it is accurate
 - Capability figures (cut depths, core sizes): confirm they match Ronan's equipment
-- Images in /img are free stock photos from Unsplash (Unsplash License, free for
+- Images in /img are free stock photos (Unsplash and Pexels licences, free for
   commercial use, no attribution required). Credits: Alex Gallegos (roadsaw),
-  infinity lifespaces (slabcut), Glenov Brankovic (cutoffsaw), Annie Spratt (breakout).
+  Glenov Brankovic (cutoffsaw), Annie Spratt (breakout), all Unsplash; floorsaw
+  (hero) is Pexels photo 21366138. ronan.jpg is Ronan's own photo.
   Replace with Ronan's own job photos when available (same file names,
   1400x1050 and 720x540 small versions, JPEG quality around 80).
 - Google Analytics: put your GA4 ID in assets/main.js (GA_ID). It only loads after cookie consent.
