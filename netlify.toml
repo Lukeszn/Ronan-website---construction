@@ -1,21 +1,5 @@
-# Netlify serves every site over HTTPS. These rules redirect any http:// or bare-domain request
-# to https://www. and add security headers. The quote form uses Netlify Forms, so no API keys are needed.
-[[redirects]]
-  from = "http://ronanotooleconcretecutting.ie/*"
-  to = "https://www.ronanotooleconcretecutting.ie/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "http://www.ronanotooleconcretecutting.ie/*"
-  to = "https://www.ronanotooleconcretecutting.ie/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://ronanotooleconcretecutting.ie/*"
-  to = "https://www.ronanotooleconcretecutting.ie/:splat"
-  status = 301
-  force = true
-
+# Netlify already redirects http:// and www.otoolecutting.ie to https://otoolecutting.ie.
+# These rules add security headers. The quote form uses Netlify Forms, so no API keys are needed.
 [[headers]]
   for = "/*"
   [headers.values]

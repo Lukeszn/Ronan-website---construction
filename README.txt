@@ -8,7 +8,6 @@ filtering all work with no extra setup and no API keys.
 BEFORE GOING LIVE, REPLACE THESE PLACEHOLDERS
 - Phone number 087 123 4567 / +353871234567 (index.html, main.js, privacy.html, thank-you.html)
 - Email info@ronanotooleconcretecutting.ie
-- Domain www.ronanotooleconcretecutting.ie (index.html, privacy.html, terms.html, sitemap.xml, robots.txt, netlify.toml, .htaccess)
 - FAQ answers (index.html #faq): confirm they match how Ronan works
 - About section: confirm it is accurate
 - Capability figures (cut depths, core sizes): confirm they match Ronan's equipment

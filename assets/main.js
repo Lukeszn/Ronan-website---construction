@@ -101,8 +101,8 @@
     $$('input[name="cut-job"]', checker).forEach(function (r) { r.addEventListener("change", renderCut); });
     sizeIn.addEventListener("input", renderCut);
     $("#cut-quote").addEventListener("click", function () {
-      var svc = $("#f-service"), size = $("#f-size");
-      if (svc) svc.value = checker.getAttribute("data-service");
+      var svc = $('#f-service input[value="' + checker.getAttribute("data-service") + '"]'), size = $("#f-size");
+      if (svc) { svc.checked = true; showError("service", ""); }
       if (size && checker.getAttribute("data-size") && !size.value) size.value = checker.getAttribute("data-size");
       track("cut_check", { service: checker.getAttribute("data-service") });
     });
@@ -180,10 +180,15 @@
     if (input) { input.setAttribute("aria-invalid", msg ? "true" : "false"); if (err) input.setAttribute("aria-describedby", "e-" + key); }
     if (err) err.textContent = msg;
   }
-  function validateField(key) { var el = document.getElementById(ids[key]); var m = rules[key](el.value); showError(key, m); return m; }
+  // The service is a set of picker cards, so its value is the checked radio
+  function fieldValue(key) {
+    if (key === "service") { var r = $('#f-service input:checked'); return r ? r.value : ""; }
+    return document.getElementById(ids[key]).value;
+  }
+  function validateField(key) { var m = rules[key](fieldValue(key)); showError(key, m); return m; }
   Object.keys(ids).forEach(function (k) {
     var el = document.getElementById(ids[k]);
-    el.addEventListener("blur", function () { if (el.value) validateField(k); });
+    el.addEventListener("blur", function () { if (fieldValue(k)) validateField(k); });
     el.addEventListener("input", function () { if (el.getAttribute("aria-invalid") === "true") validateField(k); });
   });
 
@@ -202,7 +207,7 @@
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
     var firstBad = null;
-    Object.keys(ids).forEach(function (k) { if (validateField(k) && !firstBad) firstBad = document.getElementById(ids[k]); });
+    Object.keys(ids).forEach(function (k) { if (validateField(k) && !firstBad) firstBad = k === "service" ? $('#f-service input') : document.getElementById(ids[k]); });
     if (validatePhotos() && !firstBad) firstBad = $("#f-photos");
     var consent = $("#f-consent");
     if (!consent.checked) { showError("consent", "Tick the box so I can reply to your enquiry."); if (!firstBad) firstBad = consent; } else showError("consent", "");
