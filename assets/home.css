@@ -401,9 +401,6 @@ a.contact-value{text-decoration:none}a.contact-value:hover{color:#A93B08;text-de
 .sp-field[data-invalid="true"] .sp-opt{border-color:#B3261E}
 @media (max-width:600px){.service-picker{grid-template-columns:minmax(0,1fr)}.form-card{padding:20px 16px}}
 
-/* Ronan's photo: hero chip and About portrait */
-.hero-owner{margin:4px 0 0;display:flex;align-items:center;gap:12px;font-size:15px;color:#55606A;line-height:1.4}
-.hero-owner img{width:48px;height:48px;border-radius:50%;object-fit:cover;flex:none;border:2px solid #15314B;box-shadow:0 0 0 2px #E35F1E}
+/* Hero line under the buttons */
+.hero-owner{margin:4px 0 0;font-size:15px;color:#55606A;line-height:1.4}
 .hero-owner b{color:#FFFFFF}
-.about-photo{display:block;width:calc(100% + 52px);max-width:none;height:auto;aspect-ratio:5/6;object-fit:cover;object-position:50% 15%;margin:-26px -26px 4px}
-@media (max-width:960px){.about-photo{aspect-ratio:1/1}}
