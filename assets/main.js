@@ -241,13 +241,13 @@
       showSuccess();
     } catch (err) {
       submit.disabled = false;
-      setStatus("err", "Your request could not be sent. Please try again, or ring 087 123 4567.");
+      setStatus("err", "Your request could not be sent. Please try again, or ring 087 054 1555.");
     }
   });
 
   function showSuccess() {
     var area = $("#form-area");
-    area.innerHTML = '<div class="success-panel" tabindex="-1" id="sent"><h3>Thanks, your quote request has been sent</h3><p>I will reply within one working day. If the job is urgent, ring 087 123 4567.</p></div>';
+    area.innerHTML = '<div class="success-panel" tabindex="-1" id="sent"><h3>Thanks, your quote request has been sent</h3><p>I will reply within one working day. If the job is urgent, ring 087 054 1555.</p></div>';
     $("#sent").focus();
   }
 })();
